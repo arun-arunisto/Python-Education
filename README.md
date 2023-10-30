@@ -8,3 +8,4 @@
 
 #python_sqlite_cheatcodes - a small guide of python and sqlite database
 
+#python_postgresql_cheatcodes - a small guide of python and postgresql database

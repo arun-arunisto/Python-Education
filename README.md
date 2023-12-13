@@ -11,3 +11,5 @@
 #python_postgresql_cheatcodes - a small guide of python and postgresql database
 
 #python_mongodb_cheatcodes - a small guide of python and mongodb database
+
+#interview_programs - sample programs different and simple approach

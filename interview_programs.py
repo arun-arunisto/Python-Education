@@ -163,6 +163,17 @@ def isPrime(num):
             if num%i == 0:
                 return False
     return True
+"""
+Function for converting binary to integer
+"""
+def binary2Integer(binary):
+    bin_li = []
+    for i in range(len(str(binary))-1, -1, -1):
+        bin_li.append(str(binary)[i])
+    result = 0
+    for i in range(len(bin_li)):
+        result+=(int(bin_li[i])*(2**i))
+    return result
 
 
 

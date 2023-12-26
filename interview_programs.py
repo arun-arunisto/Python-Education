@@ -128,7 +128,41 @@ def reverseList(list):
     new_li = [list[i] for i in range(len(list)-1, -1, -1)]
     return new_li
 print(reverseList(["arun", "arunisto", "python"]))
-
+"""
+Function for converting integer to binary
+"""
+def binaryNumber(num):
+    bin_li = []
+    half = num
+    while half > 0:
+        temp = half
+        half//=2
+        bin_li.insert(0, str(temp%2))
+    return "".join(bin_li)
+"""
+Fibonacci number function
+"""
+def fibonacciNum(num):
+    fib_li = []
+    num1 = 0
+    num2 = 1
+    for i in range(num):
+        fib_li.append(num1)
+        temp = num1
+        num1 = num2
+        num2+=temp
+    print(*fib_li)
+"""
+Primenumber or not
+"""
+def isPrime(num):
+    if num < 2:
+        return False
+    if num > 2:
+        for i in range(2, (num//2)+1):
+            if num%i == 0:
+                return False
+    return True
 
 
 

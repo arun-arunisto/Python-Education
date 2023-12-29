@@ -174,6 +174,32 @@ def binary2Integer(binary):
     for i in range(len(bin_li)):
         result+=(int(bin_li[i])*(2**i))
     return result
+"""
+HackerRank day 11: 2D Arrays
+"""
+li = [[1, 1, 1, 0, 0, 0],
+      [0, 1, 0, 0, 0, 0],
+      [1, 1, 1, 0, 0, 0],
+      [0, 0, 2, 4, 4, 0],
+      [0, 0, 0, 2, 0, 0],
+      [0, 0, 1, 2, 4, 0]]
+#print(li)
+sum = 0
+tarr = []
+r = 0
+for l in range(0, 4):
+    for k in range(0, 4):
+        for i in range(l, l+3):
+            #print(f"i:{i}", end="")
+            for j in range(k,k+3):
+                if i == l+1 and (j == k or j == k+2):
+                    #print("i",i,"j",j,"l",l,"k",k)
+                    continue
+                else:
+                    sum+=li[i][j]
+        tarr.append(sum)
+        sum = 0
+print(max(tarr))
 
 
 

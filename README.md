@@ -15,3 +15,5 @@
 ## interview_programs - sample programs different and simple approach
 
 ## dsa_linked_list - sample linked list [Data structures & Alogorithms]
+
+## dsa_stack - sample stack class created using collections deque

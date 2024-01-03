@@ -17,3 +17,5 @@
 ## dsa_linked_list - sample linked list [Data structures & Alogorithms]
 
 ## dsa_stack - sample stack class created using collections deque
+
+## dsa_binary_search_tree = sample BST 

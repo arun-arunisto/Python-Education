@@ -121,9 +121,20 @@ class LinkedList: #LinkedList class
                 return
             previous = data_iter
             data_iter = data_iter.next
-        
-        
-
+    
+    #removing duplicates
+    def remove_duplicates(self):
+        current = self.head
+        duplicates = {}
+        while current:
+            if current.data not in duplicates:
+                duplicates[current.data] = 1
+                current = current.next
+            else:
+                next_data = current.next
+                self.remove_data(current.data)
+                current = next_data
+    
     #displaying the data
     def display_data(self):
         if self.head is None:

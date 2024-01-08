@@ -208,6 +208,20 @@ def bubbleSort(arr):
          if arr[j] > arr[j+1]:
             arr[j], arr[j+1] = arr[j+1], arr[j]
    return arr
+"""
+prime number with less time complexity
+"""
+def prime_number(number):
+   if number <= 1:
+      return False
+   if number == 2:
+      return True
+   if number%2 == 0:
+      return False
+   for i in range(3, int(number**0.5)+1, 2):
+      if number %i == 0:
+         return False
+   return True
    
 
 

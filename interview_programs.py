@@ -222,7 +222,32 @@ def prime_number(number):
       if number %i == 0:
          return False
    return True
-   
+"""
+Text Wrap
+"""
+import textwrap
+
+string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+width = 4
+
+print(textwrap.wrap(string, width))
+#output:
+"""
+['ABCD', 'EFGH', 'IJKL', 'MNOP', 'QRST', 'UVWX', 'YZ']
+"""
+
+print(textwrap.fill(string, width))
+#output:
+"""
+ABCD
+EFGH
+IJKL
+MNOP
+QRST
+UVWX
+YZ
+
+"""
 
 
 

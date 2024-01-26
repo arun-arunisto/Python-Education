@@ -246,8 +246,24 @@ MNOP
 QRST
 UVWX
 YZ
-
 """
+"""
+Method overloading using multipledispatch module
+"""
+from multipledispatch import dispatch
+
+class sampleClass:
+    @dispatch(int, int)
+    def add(self, a, b):
+        return a+b
+
+    @dispatch(int, int, int)
+    def add(self, a, b, c):
+        return a+b+c
+
+obj = sampleClass()
+print(obj.add(23, 45)) #68
+print(obj.add(23, 45, 66)) #134
 
 
 

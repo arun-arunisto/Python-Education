@@ -264,6 +264,25 @@ class sampleClass:
 obj = sampleClass()
 print(obj.add(23, 45)) #68
 print(obj.add(23, 45, 66)) #134
+"""
+---------.|.---------
+------.|..|..|.------
+---.|..|..|..|..|.---
+-------WELCOME-------
+---.|..|..|..|..|.---
+------.|..|..|.------
+---------.|.---------
+"""
+n = 7
+m = 21
+for i in range(n//2):
+    j = int((2*i)+1)
+    print(('.|.'*j).center(m, '-'))
+print('WELCOME'.center(m, '-'))
+for i in reversed(range(n//2)):
+    j = int((2*i)+1)
+    print(('.|.'*j).center(m, '-'))
+
 
 
 

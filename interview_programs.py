@@ -282,7 +282,32 @@ print('WELCOME'.center(m, '-'))
 for i in reversed(range(n//2)):
     j = int((2*i)+1)
     print(('.|.'*j).center(m, '-'))
-
+"""
+    1     1     1     1
+    2     2     2    10
+    3     3     3    11
+    4     4     4   100
+    5     5     5   101
+    6     6     6   110
+    7     7     7   111
+    8    10     8  1000
+    9    11     9  1001
+   10    12     A  1010
+   11    13     B  1011
+   12    14     C  1100
+   13    15     D  1101
+   14    16     E  1110
+   15    17     F  1111
+   16    20    10 10000
+   17    21    11 10001
+"""
+width = len(bin(17)[2:])
+for i in range(1, 17+1):
+    dec_i = str(i)
+    oct_i = oct(i)[2:]
+    hex_i = hex(i)[2:].upper()
+    bin_i = bin(i)[2:]
+    print(dec_i.rjust(width), oct_i.rjust(width), hex_i.rjust(width), bin_i.rjust(width))
 
 
 

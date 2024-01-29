@@ -308,6 +308,30 @@ for i in range(1, 17+1):
     hex_i = hex(i)[2:].upper()
     bin_i = bin(i)[2:]
     print(dec_i.rjust(width), oct_i.rjust(width), hex_i.rjust(width), bin_i.rjust(width))
+"""
+--------e--------
+------e-d-e------
+----e-d-c-d-e----
+--e-d-c-b-c-d-e--
+e-d-c-b-a-b-c-d-e
+--e-d-c-b-c-d-e--
+----e-d-c-d-e----
+------e-d-e------
+--------e--------
+"""
+letters = "abcdefghijklmnopqrstuvwxyz"
+def print_rangoli(size):
+    lines = []
+    for row in range(size):
+        print_ = "-".join(letters[row:size])
+        lines.append(print_[::-1]+print_[1:])
+    #print(lines)
+    width = len(lines[0])
+    for row in range(size-1, 0, -1):
+        print(lines[row].center(width, "-"))
+    for row in range(size):
+        print(lines[row].center(width, "-"))
+
 
 
 

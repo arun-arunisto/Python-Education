@@ -331,8 +331,23 @@ def print_rangoli(size):
         print(lines[row].center(width, "-"))
     for row in range(size):
         print(lines[row].center(width, "-"))
+"""
+hackerrank minion solution
+"""
+def minion_game(string):
+    n = len(string)
+    comb = ((n)*(n+1))/2
+    #print(comb)
+    count_k = sum([len(string[i:]) for i in range(len(string)) if string[i] in "aeiou"])
+    count_s = comb - count_k
+    if count_s == count_k:
+        print("Draw")
+    elif count_s > count_k:
+        print("Stuart",int(count_s))
+    else:
+        print("Kevin", int(count_k))
 
-
+minion_game("banana")
 
 
 

@@ -21,3 +21,5 @@
 ## dsa_binary_search_tree - sample BST 
 
 ## unittest_folder - Test case used for unittest tutorial guide posted on linkedin
+
+## pytest_folder - Test case for pytest tutorial guide posted on linkedin

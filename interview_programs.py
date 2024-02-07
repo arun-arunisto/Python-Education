@@ -358,6 +358,29 @@ minion_game("banana")
 n = int(input())
 for i in range(1, n+1):
    print(((10**i-1)//9)**2)
+"""
+PixDynamics @decorator function
+"""
+def odd_dec(func):
+    def wrapper(a, b):
+        if (a%2!=0 and b%2!=0):
+            return a+b
+        else:
+            return func(a, b)
+    return wrapper
+
+@odd_dec
+def sum(a, b):
+    return a+b
+
+print(sum(3, 5))
+"""
+li = [1, 2, 3, 4, 5]
+result = [3, 2, 1]
+"""
+li = [1, 2, 3, 4, 5]
+print(li[2::-1])
+
 
 
 

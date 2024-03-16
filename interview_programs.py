@@ -380,6 +380,18 @@ result = [3, 2, 1]
 """
 li = [1, 2, 3, 4, 5]
 print(li[2::-1])
+"""
+Leet code : 383. Ransom Note
+"""
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        for i in range(len(ransomNote)):
+            pos = ransomNote[i]
+            matchIndex = magazine.find(pos)
+            if matchIndex == -1:
+                return False
+            magazine = magazine[:matchIndex]+magazine[matchIndex+1:]
+        return True
 
 
 

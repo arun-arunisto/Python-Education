@@ -408,6 +408,25 @@ class Solution:
                 ans += roman_dict[s[i]]
         return ans+roman_dict[s[-1]]
 
+"""
+0(log n) Binary Search
+"""
+def binary_search(array, start, end, target):
+    mid = (start+end)//2
+    if start > end:
+        return False
+    if array[mid] == target:
+        return True
+    if array[mid] > target:
+        return binary_search(array, start, mid-1, target)
+    else:
+        return binary_search(array, mid+1, end, target)
+
+li = [1, 2, 3, 4, 5, 6, 7, 8]
+target = 10
+start = 0
+end = len(li)-1
+print(binary_search(li, start, end, target))
 
 
 

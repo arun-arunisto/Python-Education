@@ -428,6 +428,38 @@ start = 0
 end = len(li)-1
 print(binary_search(li, start, end, target))
 
+"""
+O(n log n) Merge Sort
+"""
+def mergeSort(arr):
+    if len(arr) < 2:
+        return arr
+    #finding mid point
+    mid = len(arr)//2
+    #creating two arrays
+    left_arr = arr[0:mid]
+    right_arr = arr[mid:len(arr)]
+    #calling merge function it acts like recursion
+    return merge(mergeSort(left_arr), mergeSort(right_arr))
+
+#merge function
+def merge(left_arr, right_arr):
+    #creating new array to save the sort merged list
+    result = []
+    left_idx = 0
+    right_idx = 0
+    while left_idx < len(left_arr) and right_idx < len(right_arr):
+        if left_arr[left_idx] < right_arr[right_idx]:
+            result.append(left_arr[left_idx])
+            left_idx+=1
+        else:
+            result.append(right_arr[right_idx])
+            right_idx+=1
+    return result+left_arr[left_idx:]+right_arr[right_idx:]
+
+li = [35, 43, 12, 27, 5, 90, 17, 8]
+print(mergeSort(li))
+
 
 
 

@@ -16,17 +16,6 @@ s3_client = boto3.client('s3',
 s3_bucket_name = os.environ.get("AWS_BUCKET_NAME")
 print("Completed")
 
-
-#sample data
-bike_model_id = 328
-company = "Suzuki"
-model = "Access 125 (BS6)"
-img_file_name = "SUZUKI_ACCESS_125_(BS6).png"
-bike_image_key = 'bike_models/images/'+ re.sub(r'(?<=\d)(?=(?:\d\d\d)+\b)',
-                                                   '/',
-                                                   f'{bike_model_id:09d}')+'/medium/'+img_file_name
-print(bike_image_key)
-
 #generating presigned URL
 def create_presigned_url(bucket_name, object_name):
     try:

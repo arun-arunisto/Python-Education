@@ -41,3 +41,5 @@
 ## handlingGeoSpatialDatausingGeoPandas - Geo Pandas tutorial file
 
 ## profiling_in_python - profiling tools with sample code
+
+## dataclasses_in_python - sample codes for @dataclass implementation

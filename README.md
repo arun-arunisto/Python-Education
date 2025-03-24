@@ -45,3 +45,5 @@
 ## dataclasses_in_python - sample codes for @dataclass implementation
 
 ## subprocess in python - sample codes of subprocess module
+
+## ternary_operations - ternary operations using datastructures

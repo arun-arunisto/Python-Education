@@ -47,3 +47,5 @@
 ## subprocess in python - sample codes of subprocess module
 
 ## ternary_operations - ternary operations using datastructures
+
+## circuit_diagram - circuit diagram using python

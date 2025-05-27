@@ -84,7 +84,14 @@ welcome_message = r"""
     |        /|\
     |        / \
     |
-    |   WELCOME TO HANGMAN GAME
+    |   
+  ___ ___                    Created by: Arun Arunisto                                  
+ /   |   \_____    ____    ____   _____ _____    ____  
+/    ~    \__  \  /    \  / ___\ /     \\__  \  /    \ 
+\    Y    // __ \|   |  \/ /_/  >  Y Y  \/ __ \|   |  \
+ \___|_  /(____  /___|  /\___  /|__|_|  (____  /___|  /
+       \/      \/     \//_____/       \/     \/     \/ 
+
 """
 def hangman_stages(step: int):
     return stage.get(step)

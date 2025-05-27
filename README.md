@@ -56,3 +56,6 @@
 
 ![Screenshot from 2025-05-27 13-19-20](https://github.com/user-attachments/assets/fd9276dc-f6ed-49be-8066-d795b226e0e8)
 
+## number-guessing-game - number guessing game using python
+
+![Screenshot from 2025-05-27 13-20-15](https://github.com/user-attachments/assets/bc0f17c5-bf7e-468c-9b9b-e2363bfb6f44)

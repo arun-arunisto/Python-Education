@@ -1,5 +1,22 @@
 import random
 
+"""
+GAME LOGIC
+------------
+START GAME
+↓
+Generate a random number
+↓
+LOOP:
+    Ask user for a guess
+    ↓
+    If guess == number → WIN
+    If guess < number → "Too low"
+    If guess > number → "Too high"
+    ↑ (loop until correct or limit reached)
+↓
+END GAME (show result and attempts)
+"""
 
 def generating_random_number():
     return random.randint(1, 100)

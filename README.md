@@ -59,3 +59,7 @@
 ## number-guessing-game - number guessing game using python
 
 ![Screenshot from 2025-05-27 13-20-15](https://github.com/user-attachments/assets/bc0f17c5-bf7e-468c-9b9b-e2363bfb6f44)
+
+## tic-tac-toe - tic-tac-toe using python
+
+![Screenshot from 2025-06-10 11-54-18](https://github.com/user-attachments/assets/6290cb10-7750-4cd4-b580-c2a5e29d01cb)

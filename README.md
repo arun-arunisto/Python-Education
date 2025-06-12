@@ -63,3 +63,7 @@
 ## tic-tac-toe - tic-tac-toe using python
 
 ![Screenshot from 2025-06-10 11-54-18](https://github.com/user-attachments/assets/6290cb10-7750-4cd4-b580-c2a5e29d01cb)
+
+## word-scramble - word-scramble using python
+
+![Screenshot from 2025-06-12 16-40-00](https://github.com/user-attachments/assets/5f27199e-586f-4115-9f8d-d9464fbac04b)

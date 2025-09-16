@@ -862,3 +862,21 @@ def spliting_li(li, new_li=[]):
             if (i+val)%2 == 0:
                 new_li.append([val, i])
         return spliting_li(li[1:], new_li)
+
+"""
+input:
+------
+li = ["hi", "bye", "one", "banana", "ni"]
+
+output:
+------
+{2: ['hi', 'ni'], 3: ['bye', 'one'], 6: ['banana']}
+"""
+def map_array_len(li:list):
+    new_dict = {}
+    for i in range(len(li)):
+        if len(li[i]) in new_dict:
+            new_dict[len(li[i])].append(li[i])
+        else:
+            new_dict[len(li[i])] = [li[i]]
+    return new_dict

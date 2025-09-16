@@ -843,3 +843,22 @@ def counting_duplicates(data:list):
         else:
             output_dict[data[i]] = 1
     return output_dict
+
+"""
+input:
+------
+li = [1, 2, 3, 4, 5, 6]
+
+output:
+------
+[[1, 3], [1, 5], [2, 4], [2, 6], [3, 5], [4, 6]]
+"""
+def spliting_li(li, new_li=[]):
+    if len(li) == 0:
+        return new_li
+    else:
+        val = li[0]
+        for i in (li[1:]):
+            if (i+val)%2 == 0:
+                new_li.append([val, i])
+        return spliting_li(li[1:], new_li)

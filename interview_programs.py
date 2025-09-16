@@ -802,3 +802,26 @@ def snake_case(word:str):
 
 def pascal_case(word:str):
     return "".join(list(map(lambda x: x.capitalize(), word.split(" "))))
+
+"""
+input:
+------
+data = [
+{"id":1, "name":"arun", "department":"software"},
+{"id":2, "name":"pavani", "department":"HR"},
+{"id":3, "name":"rutuja", "department":"HR"},
+{"id":4, "name":"meghana", "department":"marketing"}
+]
+
+output:
+-------
+{'software': [{'id': 1, 'name': 'arun', 'department': 'software'}], 'HR': [{'id': 2, 'name': 'pavani', 'department': 'HR'}, {'id': 3, 'name': 'rutuja', 'department': 'HR'}], 'marketing': [{'id': 4, 'name': 'meghana', 'department': 'marketing'}]}
+"""
+def object_mapping(data:list):
+    new_dict = {}
+    for i in range(len(data)):
+        if data[i]["department"] in new_dict:
+            new_dict[data[i]["department"]].append(data[i])
+        else:
+            new_dict[data[i]["department"]] = [data[i]]
+    return new_dict

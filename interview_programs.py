@@ -772,3 +772,14 @@ class Solution:
             lines+=1
         return [lines, total]
 
+"""
+input: ["hi", "bye", "banana"]
+output: ['iH', 'eyB', 'ananaB']
+"""
+# solution
+def arr_function(li:list):
+    new_li = []
+    for i in range(len(li)):
+        cap = li[i].capitalize()
+        new_li.append(cap[::-1])
+    return new_li

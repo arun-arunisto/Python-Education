@@ -783,3 +783,22 @@ def arr_function(li:list):
         cap = li[i].capitalize()
         new_li.append(cap[::-1])
     return new_li
+
+"""
+Functions for camel case, pascal case, snake case asked by ammar and nagaraj
+"""
+def camel_case(word:str):
+    li = word.split(" ")
+    new = []
+    for i in range(len(li)):
+        if i == 0:
+            new.append(li[i].lower())
+        else:
+            new.append(li[i].capitalize())
+    return "".join(new)
+    
+def snake_case(word:str):
+    return "_".join(list(map(lambda x: x.lower(), word.split(" "))))
+
+def pascal_case(word:str):
+    return "".join(list(map(lambda x: x.capitalize(), word.split(" "))))

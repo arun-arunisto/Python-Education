@@ -880,3 +880,26 @@ def map_array_len(li:list):
         else:
             new_dict[len(li[i])] = [li[i]]
     return new_dict
+
+"""
+input:
+------
+list_1 = [1, 2, 3]
+list_2 = ["a", "b", "c", "d"]
+
+output:
+------
+[1, 'a', 2, 'b', 3, 'c', 'd']
+"""
+def zig_zag_arrays(list_1:list, list_2:list):
+    if len(list_1) >= len(list_2):
+        n = len(list_1)
+    else:
+        n = len(list_2)
+    new_li = []
+    for i in range(n):
+        if len(list_1) > i:
+            new_li.append(list_1[i])
+        if len(list_2) > i:
+            new_li.append(list_2[i])
+    return new_li

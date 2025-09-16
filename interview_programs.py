@@ -825,3 +825,21 @@ def object_mapping(data:list):
         else:
             new_dict[data[i]["department"]] = [data[i]]
     return new_dict
+
+"""
+input:
+------
+data = ["car", "car", "bike", "bike", "jeep"]
+
+output:
+------
+{'car': 2, 'bike': 2, 'jeep': 1}
+"""
+def counting_duplicates(data:list):
+    output_dict = {}
+    for i in range(len(data)):
+        if data[i] in output_dict:
+            output_dict[data[i]] += 1
+        else:
+            output_dict[data[i]] = 1
+    return output_dict

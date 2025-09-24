@@ -921,3 +921,13 @@ def map_target(arr: list, target: int, result_li=[]):
         result_li.append(tuple(arr[:target]))
         backup_arr = arr[target:]
         return map_target(backup_arr, target, result_li)
+
+
+"""
+input = [1, 2, 3, 4, 5]
+steps = 2
+rotate an array with steps
+result = [4, 5, 1, 2, 3]
+"""
+def rotate_array(arr: list, steps: int):
+    return arr[0-steps:]+arr[:0-steps]

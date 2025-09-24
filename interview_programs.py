@@ -942,3 +942,20 @@ def create_counter(n: int):
         n+=1
         return res
     return counter
+
+"""
+Find the missing one:
+input = [1, 2, 4, 5, 6]
+answer = 3
+"""
+def find_the_missing_one(arr: list):
+    # sorting the array
+    new = arr
+    new.sort()
+    first = arr[0]
+    last = arr[-1]
+    for i in range(first, last+1):
+        if i not in arr:
+            return i
+    return arr
+

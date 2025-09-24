@@ -931,3 +931,14 @@ result = [4, 5, 1, 2, 3]
 """
 def rotate_array(arr: list, steps: int):
     return arr[0-steps:]+arr[:0-steps]
+
+"""
+Leet code 2620: Counter
+"""
+def create_counter(n: int):
+    def counter():
+        nonlocal n
+        res = n
+        n+=1
+        return res
+    return counter

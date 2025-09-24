@@ -903,3 +903,21 @@ def zig_zag_arrays(list_1:list, list_2:list):
         if len(list_2) > i:
             new_li.append(list_2[i])
     return new_li
+
+"""
+Leet code 2677: Chunk Array
+"""
+def target_mapping(arr: list, target: int):
+    if len(arr) < 0 or len(arr)%2 != 0:
+        return []
+    else:
+        result = map_target(arr, target)
+        return result
+
+def map_target(arr: list, target: int, result_li=[]):
+    if len(arr) == 0:
+        return result_li
+    else:
+        result_li.append(tuple(arr[:target]))
+        backup_arr = arr[target:]
+        return map_target(backup_arr, target, result_li)

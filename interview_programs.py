@@ -959,3 +959,19 @@ def find_the_missing_one(arr: list):
             return i
     return arr
 
+
+"""
+Anagram
+input: "listen", "silent"
+output: True
+"""
+def check_anagram(word1:str, word2:str):
+    if len(word1) != len(word2):
+        return False
+    # sorting two words
+    sorted_word1 = sorted(word1)
+    sorted_word2 = sorted(word2)
+    for i in range(len(word1)):
+        if sorted_word1[i] != sorted_word2[i]:
+            return False
+    return True

@@ -975,3 +975,35 @@ def check_anagram(word1:str, word2:str):
         if sorted_word1[i] != sorted_word2[i]:
             return False
     return True
+
+"""
+Leet Code 166: Fraction recurring problem
+"""
+def fraction_recurring_problem(numerator: int, denominator: int):
+    if numerator % denominator == 0:
+        return str(numerator // denominator)
+
+    remainder = {}
+    steps = True
+    i = 0
+    rem = numerator % denominator
+    result = str(numerator // denominator) + "."
+    decimal_part = []  
+
+    while steps:
+        if rem == 0:
+            steps = False
+            break
+
+        if rem in remainder:
+            idx = remainder[rem]
+            decimal_part.insert(idx, "(")
+            decimal_part.append(")")
+            steps = False
+            break
+
+        remainder[rem] = len(decimal_part)
+        rem *= 10
+        decimal_part.append(str(rem // denominator))
+        rem = rem % denominator
+    return result + "".join(decimal_part)

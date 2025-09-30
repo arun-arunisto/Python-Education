@@ -69,3 +69,9 @@
 ![Screenshot from 2025-06-12 16-40-00](https://github.com/user-attachments/assets/5f27199e-586f-4115-9f8d-d9464fbac04b)
 
 ## nonlocal_concept_programms - small programs contains with the nonlocal concepts
+
+## tetris-game - tetris game using python
+
+<img width="823" height="356" alt="Screenshot from 2025-09-30 17-24-14" src="https://github.com/user-attachments/assets/d15bed6b-5ca7-425d-9f5d-f24a57929418" />
+
+## tetris game using python - without any thrid party modules

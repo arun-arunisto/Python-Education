@@ -1007,3 +1007,19 @@ def fraction_recurring_problem(numerator: int, denominator: int):
         decimal_part.append(str(rem // denominator))
         rem = rem % denominator
     return result + "".join(decimal_part)
+
+"""
+Jump Game: Geeks for Geeks
+"""
+class Solution:
+    # Function to check if we can reach the last index from the 0th index.
+    def canReach(self, arr):
+        #code here
+        if len(arr) == 0:
+            return False
+        index = 0
+        while index < len(arr):
+            if arr[index] == 0:
+                return False
+            index += arr[index]
+        return True

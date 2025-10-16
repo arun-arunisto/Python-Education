@@ -1036,4 +1036,17 @@ class Solution:
                 sort_result = False
                 break
         return sort_result
-                
+"""
+First repeating element: (Geeks for Geeks Basics)
+"""
+class Solution:
+    def firstRepeated(self,arr):
+        # code here 
+        seen = {}
+        first_repeat_enum_index = float('inf')
+        for i, num in enumerate(arr):
+            if num in seen:
+                first_repeat_enum_index = min(first_repeat_enum_index, seen[num])
+            else:
+                seen[num] = i+1
+        return first_repeat_enum_index if first_repeat_enum_index != float('inf') else -1

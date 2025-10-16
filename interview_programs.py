@@ -1023,3 +1023,17 @@ class Solution:
                 return False
             index += arr[index]
         return True
+
+"""
+Check if an array is sorted or not (Geeks for Gekks Basics)
+"""
+class Solution:
+    def isSorted(self, arr) -> bool:
+        # code here
+        sort_result = True
+        for i in range(len(arr)-1):
+            if arr[i] > arr[i+1]:
+                sort_result = False
+                break
+        return sort_result
+                

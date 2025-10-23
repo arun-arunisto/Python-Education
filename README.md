@@ -75,3 +75,5 @@
 <img width="823" height="356" alt="Screenshot from 2025-09-30 17-24-14" src="https://github.com/user-attachments/assets/d15bed6b-5ca7-425d-9f5d-f24a57929418" />
 
 ## tetris game using python - without any thrid party modules
+
+## garbage_collection_in_python - definition and explaining about garbage collection in python

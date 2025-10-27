@@ -77,3 +77,5 @@
 ## tetris game using python - without any thrid party modules
 
 ## garbage_collection_in_python - definition and explaining about garbage collection in python
+
+## different_copy_methods_in_python - samll program to define the copy methods in python

@@ -46,7 +46,12 @@ class Sample:
     def add(a, b):
         return a+b
 
-print(Sample.add(20, 30))
+print(Sample.add(20, 30)) # 50
+
+
+
+
+
 
 
 

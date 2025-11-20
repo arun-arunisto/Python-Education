@@ -1074,3 +1074,29 @@ print(isomorphic_string("egg", "add"))
 print(isomorphic_string("foo", "bar"))
 print(isomorphic_string("paper", "title"))
 print(isomorphic_string("badc", "baba"))
+
+"""
+Leetcode 290: Word Pattern
+"""
+def word_pattern(pattern, s):
+    li = s.split(" ")
+    if len(pattern) != len(li):
+        return False
+    word_dict = {}
+    for i in range(len(pattern)):
+        original = pattern[i]
+        replacement = li[i]
+        if original not in word_dict.keys():
+            if replacement not in word_dict.values():
+                word_dict[original] = replacement
+            else:
+                return False
+        else:
+            if word_dict[original] != replacement:
+                return False
+    return True
+
+print(word_pattern("abba", "dog cat cat dog"))
+print(word_pattern("abba", "dog cat cat fish"))
+print(word_pattern("aaaa", "dog cat cat dog"))
+

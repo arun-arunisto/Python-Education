@@ -1050,3 +1050,27 @@ class Solution:
             else:
                 seen[num] = i+1
         return first_repeat_enum_index if first_repeat_enum_index != float('inf') else -1
+
+"""
+Leetcode 205: Isomorphic String
+"""
+def isomorphic_string(s, t):
+    if len(s) != len(t):
+        return False
+    word_dict = {}
+    for i in range(len(s)):
+        original = s[i]
+        replacement = t[i]
+        if original not in word_dict.keys():
+            if replacement not in word_dict.values():
+                word_dict[original] = replacement
+            else:
+                return False
+        else:
+            if word_dict[original] != replacement:
+                return False
+    return True
+print(isomorphic_string("egg", "add"))
+print(isomorphic_string("foo", "bar"))
+print(isomorphic_string("paper", "title"))
+print(isomorphic_string("badc", "baba"))

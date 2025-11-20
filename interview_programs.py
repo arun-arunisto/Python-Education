@@ -1127,3 +1127,19 @@ def is_vowel(char):
     return False
 
 print(reverse_vowel_string("IceCream"))
+
+"""
+Leetcode 383: Ransom Note
+"""
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        if len(ransomNote) > len(magazine):
+            return False
+        for i in range(len(ransomNote)):
+            check_str = ransomNote[i]
+            if check_str not in magazine:
+                return False
+            else:
+                if magazine.count(check_str) < ransomNote.count(check_str):
+                    return False
+        return True

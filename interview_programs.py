@@ -1100,3 +1100,30 @@ print(word_pattern("abba", "dog cat cat dog"))
 print(word_pattern("abba", "dog cat cat fish"))
 print(word_pattern("aaaa", "dog cat cat dog"))
 
+"""
+Leetcode 345: Reverse vowels of a string
+"""
+def reverse_vowel_string(s):
+    li = list(s)
+    start = 0
+    end = len(s)-1
+    while start < end:
+        print(start, end)
+        if not is_vowel(li[start]):
+            start+=1
+        elif not is_vowel(li[end]):
+            end-=1
+        else:
+            temp = li[start]
+            li[start] = li[end]
+            li[end] = temp
+            start +=1
+            end -=1
+    return "".join(li)
+
+def is_vowel(char):
+    if char.lower() in ("a", "e", "i", "o", "u"):
+        return True
+    return False
+
+print(reverse_vowel_string("IceCream"))

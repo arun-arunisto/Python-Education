@@ -1178,3 +1178,26 @@ def number_to_hexadecimal(num):
 
 print(number_to_hexadecimal(26))
 print(number_to_hexadecimal(-1))
+
+"""
+Leetcode 389: Find the difference
+"""
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        dict_s, dict_t = {}, {}
+        for i in s:
+            if i in dict_s:
+                dict_s[i]+=1
+            else:
+                dict_s[i] = 1
+        for i in t:
+            if i in dict_t:
+                dict_t[i] += 1
+            else:
+                dict_t[i] = 1
+        
+        for c in t:
+            if c not in s:
+                return c
+            if dict_s[c] < dict_t[c]:
+                return c

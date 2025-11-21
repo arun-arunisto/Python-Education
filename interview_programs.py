@@ -1201,3 +1201,24 @@ class Solution:
                 return c
             if dict_s[c] < dict_t[c]:
                 return c
+
+"""
+Leetcode 409: Longest Palindrome
+"""
+class Solution:
+    def longestPalindrome(self, s: str) -> int:
+        frequency = {}
+        ans = 0
+        is_odd = False
+        for i in s:
+            if i in frequency:
+                frequency[i] += 1
+            else:
+                frequency[i] = 1
+        for i in frequency:
+            if frequency[i]%2 == 0:
+                ans += frequency[i]
+            else:
+                ans += frequency[i]-1
+                is_odd = True
+        return ans+1 if is_odd else ans

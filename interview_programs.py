@@ -1243,3 +1243,14 @@ def add_strings(num1, num2):
     return ans
 
 print(add_strings("11", "123"))
+
+"""
+Leetcode 435: Number of segments in a string
+"""
+class Solution:
+    def countSegments(self, s: str) -> int:
+        segments = 0
+        for i in range(len(s)):
+            if (i == 0 or s[i-1] == " ") and s[i] != " ":
+                segments+=1
+        return segments

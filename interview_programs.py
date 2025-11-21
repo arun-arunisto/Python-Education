@@ -1159,3 +1159,22 @@ class Solution:
                 pos = i
                 break
         return pos
+
+"""
+Leetcode 405: Number to hexa decimal
+"""
+def number_to_hexadecimal(num):
+    hexa_dec = "0123456789abcdef"
+    s = ""
+    if num == 0:
+        return "0"
+    if num < 0:
+        num = (1<<32)+num
+    while num:
+        rem = num%16
+        s = hexa_dec[rem]+s
+        num//=16
+    return s
+
+print(number_to_hexadecimal(26))
+print(number_to_hexadecimal(-1))

@@ -1222,3 +1222,24 @@ class Solution:
                 ans += frequency[i]-1
                 is_odd = True
         return ans+1 if is_odd else ans
+
+"""
+Leetcode 415: Add strings
+"""
+def add_strings(num1, num2):
+    i = len(num1)-1
+    j = len(num2)-1
+    carry = 0
+    ans = ""
+    while i>=0 or j>=0 or carry != 0:
+        digit1 = int(num1[i]) if i >= 0 else 0
+        digit2 = int(num2[j]) if j>= 0 else 0
+        sum_of_digit = digit1+digit2+carry
+        carry = sum_of_digit//10
+        res = sum_of_digit%10
+        ans = str(res)+ans
+        i-=1
+        j-=1
+    return ans
+
+print(add_strings("11", "123"))

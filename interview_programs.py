@@ -1254,3 +1254,19 @@ class Solution:
             if (i == 0 or s[i-1] == " ") and s[i] != " ":
                 segments+=1
         return segments
+
+
+"""
+Sacumen: Q1: nested loop into single list
+"""
+sample = [("Arun", "Python", "Sacumen"), 25, 12.5, "Arunisto", [8, 12, 2025]]
+
+def nested_into_list(li):
+    result = []
+    for i in range(len(li)):
+        if isinstance(li[i], (list, tuple)):
+            result.extend(li[i])
+        else:
+            result.append(li[i])
+    return result
+print(nested_into_list(sample))

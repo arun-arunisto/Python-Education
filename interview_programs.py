@@ -1270,3 +1270,11 @@ def nested_into_list(li):
             result.append(li[i])
     return result
 print(nested_into_list(sample))
+
+"""
+Write a program to sum all the even numbers from a list without using a for or a while loop
+"""
+
+li = [1, 2, 3, 4, 5]
+result = sum(map(lambda x: x if x%2==0 else 0, li))
+print(result)

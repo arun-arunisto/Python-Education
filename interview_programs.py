@@ -1278,3 +1278,24 @@ Write a program to sum all the even numbers from a list without using a for or a
 li = [1, 2, 3, 4, 5]
 result = sum(map(lambda x: x if x%2==0 else 0, li))
 print(result)
+
+"""
+TCS Question
+"""
+name = "a25r35u455n501"
+
+def consecutive_sum(s):
+    total = 0
+    digit = ""
+    for i in range(len(s)):
+        if s[i].isdigit():
+            digit+=s[i]
+        else:
+            if digit:
+                total+=int(digit)
+                digit = ""
+    if digit:
+        total+=int(digit)
+    return total
+
+print(consecutive_sum(name))

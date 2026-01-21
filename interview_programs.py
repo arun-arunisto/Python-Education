@@ -1299,3 +1299,32 @@ def consecutive_sum(s):
     return total
 
 print(consecutive_sum(name))
+
+"""
+TCS - decorator roundof
+"""
+name = "a25r35u455n501"
+
+def roundof_sum(func):
+    def wrap_method(s):
+        total = func(s)
+        round_of_value = ((total+9)//10)*10
+        return round_of_value
+    return wrap_method
+
+@roundof_sum
+def consecutive_sum(s):
+    total = 0
+    digit = ""
+    for i in range(len(s)):
+        if s[i].isdigit():
+            digit+=s[i]
+        else:
+            if digit:
+                total+=int(digit)
+                digit = ""
+    if digit:
+        total+=int(digit)
+    return total
+
+print(consecutive_sum(name))

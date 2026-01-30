@@ -1328,3 +1328,17 @@ def consecutive_sum(s):
     return total
 
 print(consecutive_sum(name))
+
+"""
+Question by nagu
+"""
+sample = {"a":1, "b":1, "c":2}
+
+def invert_object(obj):
+    result = ""
+    for key, val in obj.items():
+        raw_data = f"{val}:{key} "
+        result += raw_data
+    return result
+
+print(invert_object(sample))

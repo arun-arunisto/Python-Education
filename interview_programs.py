@@ -1342,3 +1342,17 @@ def invert_object(obj):
     return result
 
 print(invert_object(sample))
+
+"""
+Josephus Problem - O(n^2)
+"""
+def josephus_simulation(n):
+    soldiers = list(range(1, n + 1))
+    index = 0
+
+    while len(soldiers) > 1:
+        index = (index + 1) % len(soldiers)
+        soldiers.pop(index)
+        print("index",index,"\nSoldiers:",soldiers)
+
+    return soldiers[0]

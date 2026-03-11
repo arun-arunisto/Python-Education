@@ -1356,3 +1356,11 @@ def josephus_simulation(n):
         print("index",index,"\nSoldiers:",soldiers)
 
     return soldiers[0]
+"""
+Josephus Problem - Second Approach
+"""
+def josephus_general(n, k):
+    survivor = 0
+    for i in range(1, n + 1):
+        survivor = (survivor + k) % i
+    return survivor + 1
